@@ -1,0 +1,219 @@
+############################################################
+# 1) Secrets / env / credentials（敏感信息）
+############################################################
+.env
+.env.*
+!.env.example
+*.secret
+*.secrets
+*.key
+*.pem
+*.p12
+*.pfx
+*.crt
+*.cer
+*.csr
+*.jks
+*.keystore
+*.ovpn
+*.ppk
+id_rsa
+id_rsa.pub
+id_ed25519
+id_ed25519.pub
+*.token
+*.jwt
+*.license
+*.lic
+config.local.*
+config.dev.*
+config.prod.*
+config.production.*
+settings.local.*
+settings.dev.*
+settings.prod.*
+settings.production.*
+
+# 你项目里可能有的自定义敏感配置
+backend/.env
+frontend/.env
+internal/**/config.local.*
+internal/**/config.dev.*
+internal/**/config.prod.*
+
+############################################################
+# 2) Databases / data / cache（数据库&数据文件）
+############################################################
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+*.rdb
+*.dump
+*.bak
+*.backup
+*.bkp
+
+# 你的 sqlite
+backend/iptables.db
+
+# 可能的业务数据导出
+data/
+datasets/
+export/
+exports/
+backup/
+backups/
+
+############################################################
+# 3) Logs / runtime / pid / tmp
+############################################################
+*.log
+*.log.*
+logs/
+log/
+tmp/
+temp/
+cache/
+runtime/
+run/
+pids/
+*.pid
+*.pid.*
+
+############################################################
+# 4) Build artifacts（编译/构建产物）
+############################################################
+# Go build
+bin/
+dist/
+build/
+out/
+release/
+*.exe
+*.dll
+*.so
+*.dylib
+*.test
+*.prof
+*.pprof
+coverage/
+coverage.out
+
+# 前端 build
+frontend/dist/
+frontend/build/
+frontend/.next/
+frontend/.nuxt/
+frontend/.output/
+frontend/.cache/
+frontend/.vite/
+frontend/.turbo/
+
+############################################################
+# 5) Dependencies（依赖目录）
+############################################################
+node_modules/
+bower_components/
+jspm_packages/
+vendor/            # 如果你不希望把 Go vendor 提交
+# 如果你希望提交 vendor（离线部署），把上一行删掉
+
+############################################################
+# 6) IDE / Editor / OS junk
+############################################################
+.vscode/
+.idea/
+*.iml
+*.ipr
+*.iws
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+*.orig
+*.rej
+
+############################################################
+# 7) Go specific
+############################################################
+# Go workspace / tooling
+go.work
+go.work.sum
+*.coverprofile
+
+# If you use Delve / debug
+__debug_bin
+debug.test
+*.out
+
+############################################################
+# 8) Node / React / Typescript specific
+############################################################
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# TypeScript build caches
+*.tsbuildinfo
+
+############################################################
+# 9) Docker / Kubernetes / DevOps
+############################################################
+# Docker runtime
+docker-data/
+dockerdata/
+*.tar
+*.tgz
+*.img
+*.qcow2
+*.vmdk
+*.sh
+# K8s local
+*.kubeconfig
+.kube/
+minikube/
+kind/
+
+############################################################
+# 10) Test / benchmark outputs
+############################################################
+test-results/
+junit.xml
+*.bench
+*.bench.txt
+
+############################################################
+# 11) Misc / other tools
+############################################################
+# Python venv / cache (你经常写 python 工具)
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+
+# Terraform / Ansible
+.terraform/
+*.tfstate
+*.tfstate.*
+*.retry
+
+############################################################
+# 12) Keep examples / templates
+############################################################
+!.env.example
+!config.example.*
+!*.sample
+!*.template
+
